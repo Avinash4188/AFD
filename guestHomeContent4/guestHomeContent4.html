@@ -1,0 +1,105 @@
+<template>
+    <div class="mainSection yallowBk">
+		<div class="pageSize">
+			<h1>Patient are saying...</h1>
+			<!--<p>Revealing Customer Insights: Hear What Our Valued Clients Have to Say About Their Experiences with Us.</p>-->
+			<!--<a class="reviewBtn" href="">Review Customer Testimonials</a>-->
+			<div class="slider">
+				<input type="radio" name="slider1" id="slide1-4" checked = {isChecked1} onchange={handleRadioClick} >
+				<input type="radio" name="slider2" id="slide2-4" checked = {isChecked2} onchange={handleRadioClick} >
+				
+
+				<div class="slider-content">
+					<div class="boxSlide">
+						
+						<div class="homeLogo">
+							<img class="qomas" src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopY&operationContext=DELIVERY&contentId=05THs00001spdl8&page=0&d=/a/Hs0000012zkV/zNC3xElCf3F1BMukDzuRPRBF1oFrClisbYyPU27djqM&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+							<div class="homelogoInner">
+								<p>I'm not tech-savvy, but your system is impressively user-friendly. Medication reminders are a piece of cake, and appointment scheduling is straightforward. It's made me feel more in control of my health journey.</p>
+								<img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopm&operationContext=DELIVERY&contentId=05THs00001spdl3&page=0&d=/a/Hs0000012zka/xTbpMrQp54vBlmZDsfDlYzGW3F.kHga7UtckRVK8K1E&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+								<!--<div class="footerTestimonial">
+									<img src="https://afdhealth.file.force.com/sfc/dist/version/download/?oid=00DHs000001QFbz&ids=068Hs00000YgbV5&d=%2Fa%2FHs0000012x77%2FSAhornmGGtjCU4eOBisySzyeJRkwA3aeeTkASs2kVCM&asPdf=false" alt="Slider Logo" />
+									<h4>Chris Peterson <span>Cape Town, South Africa</span></h4>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="boxSlide">
+						
+						<div class="homeLogo">
+							<img class="qomas" src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopY&operationContext=DELIVERY&contentId=05THs00001spdl8&page=0&d=/a/Hs0000012zkV/zNC3xElCf3F1BMukDzuRPRBF1oFrClisbYyPU27djqM&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+							<div class="homelogoInner">
+								<p>As a busy mom, your system has been a lifesaver. Managing our family's health records is now stress-free and efficient. Thank you for making our lives easier!</p>
+								<img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopm&operationContext=DELIVERY&contentId=05THs00001spdl3&page=0&d=/a/Hs0000012zka/xTbpMrQp54vBlmZDsfDlYzGW3F.kHga7UtckRVK8K1E&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+								<!--<div class="footerTestimonial">
+									<img src="https://afdhealth.file.force.com/sfc/dist/version/download/?oid=00DHs000001QFbz&ids=068Hs00000YgbV5&d=%2Fa%2FHs0000012x77%2FSAhornmGGtjCU4eOBisySzyeJRkwA3aeeTkASs2kVCM&asPdf=false" alt="Slider Logo" />
+									<h4>Chris Peterson <span>Cape Town, South Africa</span></h4>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="boxSlide">
+						
+						<div class="homeLogo">
+							<img class="qomas" src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopY&operationContext=DELIVERY&contentId=05THs00001spdl8&page=0&d=/a/Hs0000012zkV/zNC3xElCf3F1BMukDzuRPRBF1oFrClisbYyPU27djqM&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+							<div class="homelogoInner">
+								<p>I'll admit, I was skeptical initially, but now I can't imagine life without it. Booking appointments has become a breeze! I highly recommend this system for its convenience.</p>
+								<img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopm&operationContext=DELIVERY&contentId=05THs00001spdl3&page=0&d=/a/Hs0000012zka/xTbpMrQp54vBlmZDsfDlYzGW3F.kHga7UtckRVK8K1E&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+								<!--<div class="footerTestimonial">
+									<img src="https://afdhealth.file.force.com/sfc/dist/version/download/?oid=00DHs000001QFbz&ids=068Hs00000YgbV5&d=%2Fa%2FHs0000012x77%2FSAhornmGGtjCU4eOBisySzyeJRkwA3aeeTkASs2kVCM&asPdf=false" alt="Slider Logo" />
+									<h4>Chris Peterson <span>Cape Town, South Africa</span></h4>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="boxSlide">
+						
+						<div class="homeLogo">
+							<img class="qomas" src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopY&operationContext=DELIVERY&contentId=05THs00001spdl8&page=0&d=/a/Hs0000012zkV/zNC3xElCf3F1BMukDzuRPRBF1oFrClisbYyPU27djqM&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+							<div class="homelogoInner">
+								<p>Your system is a game-changer! It's incredibly user-friendly, keeping me on top of my health without any tech hassle. It's become my go-to solution for managing my well-being.</p>
+								<img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopm&operationContext=DELIVERY&contentId=05THs00001spdl3&page=0&d=/a/Hs0000012zka/xTbpMrQp54vBlmZDsfDlYzGW3F.kHga7UtckRVK8K1E&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+								<!--<div class="footerTestimonial">
+									<img src="https://afdhealth.file.force.com/sfc/dist/version/download/?oid=00DHs000001QFbz&ids=068Hs00000YgbV5&d=%2Fa%2FHs0000012x77%2FSAhornmGGtjCU4eOBisySzyeJRkwA3aeeTkASs2kVCM&asPdf=false" alt="Slider Logo" />
+									<h4>Chris Peterson <span>Cape Town, South Africa</span></h4>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="boxSlide">
+						
+						<div class="homeLogo">
+							<img class="qomas" src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopY&operationContext=DELIVERY&contentId=05THs00001spdl8&page=0&d=/a/Hs0000012zkV/zNC3xElCf3F1BMukDzuRPRBF1oFrClisbYyPU27djqM&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+							<div class="homelogoInner">
+								<p>As a busy mom, your system has been a lifesaver. Managing our family's health records is now stress-free and efficient. Thank you for making our lives easier!</p>
+								<img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopm&operationContext=DELIVERY&contentId=05THs00001spdl3&page=0&d=/a/Hs0000012zka/xTbpMrQp54vBlmZDsfDlYzGW3F.kHga7UtckRVK8K1E&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+								<!--<div class="footerTestimonial">
+									<img src="https://afdhealth.file.force.com/sfc/dist/version/download/?oid=00DHs000001QFbz&ids=068Hs00000YgbV5&d=%2Fa%2FHs0000012x77%2FSAhornmGGtjCU4eOBisySzyeJRkwA3aeeTkASs2kVCM&asPdf=false" alt="Slider Logo" />
+									<h4>Chris Peterson <span>Cape Town, South Africa</span></h4>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="boxSlide">
+						
+						<div class="homeLogo">
+							<img class="qomas" src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopY&operationContext=DELIVERY&contentId=05THs00001spdl8&page=0&d=/a/Hs0000012zkV/zNC3xElCf3F1BMukDzuRPRBF1oFrClisbYyPU27djqM&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+							<div class="homelogoInner">
+								<p>As a busy mom, your system has been a lifesaver. Managing our family's health records is now stress-free and efficient. Thank you for making our lives easier!</p>
+								<img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000asopm&operationContext=DELIVERY&contentId=05THs00001spdl3&page=0&d=/a/Hs0000012zka/xTbpMrQp54vBlmZDsfDlYzGW3F.kHga7UtckRVK8K1E&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Slider Logo" />
+								<!--<div class="footerTestimonial">
+									<img src="https://afdhealth.file.force.com/sfc/dist/version/download/?oid=00DHs000001QFbz&ids=068Hs00000YgbV5&d=%2Fa%2FHs0000012x77%2FSAhornmGGtjCU4eOBisySzyeJRkwA3aeeTkASs2kVCM&asPdf=false" alt="Slider Logo" />
+									<h4>Chris Peterson <span>Cape Town, South Africa</span></h4>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-controls">
+					<label for="slide1-4"></label>
+					<label for="slide2-4"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

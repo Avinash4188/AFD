@@ -1,0 +1,21 @@
+<template>
+    <div class="pageSize termSection">
+		<div class="termLeft">
+			<ul>
+				<li class={activeMembershipTermOfService}><a class="memIcon"  onclick={handelMembershipTermOfService}>Membership Terms of Service</a></li>
+				<li class={activeMedicalTermsOfService}><a class="medIcon" onclick={handelMedicalTermsOfService}>Medical Terms of Service</a></li>
+				<li class={activePrivacyPolicy}><a class="privacyIcon" onclick={handelPrivacyPolicy}>Privacy Policy</a></li>
+				<li class={activeHipaPrivacyPolicy}  ><a class="hippaIcon" onclick={handelHipaPrivacyPolicy}>Notice of HIPAA Privacy Practices</a></li>
+			</ul>
+		</div>
+		<div class="termRight">
+			<c-membership-terms-of-service if:true={showMembershipTermsOfService}></c-membership-terms-of-service>
+			<c-medical-terms-of-service if:true={showMedicalTermsOfService}></c-medical-terms-of-service>
+			<c-privacy-policy if:true={showPrivacyPolicy}></c-privacy-policy>
+			<c-hipa-privacy-policy if:true={showHipaPrivacyPolicy}></c-hipa-privacy-policy>
+		</div>
+	</div>
+	
+
+
+</template>

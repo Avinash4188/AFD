@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Pharmacy Finder" icon-name="custom:custom14">
+
+        <div class="slds-m-around_medium">
+            <lightning-input
+                label="Enter Zip Code"
+                type="text"
+                value={zipCode}
+                onchange={handleZipCodeChange}
+            ></lightning-input>
+            <lightning-button label="Search" variant="brand" onclick={searchForPharmacies}></lightning-button>
+        </div>
+
+        <template if:true={showPharmacyList}>
+            <lightning-combobox label="Select a Pharmacy" options={pharmacyOptions} value={selectedPharmacy} onchange={handlePharmacyChange}></lightning-combobox>
+            <lightning-button label="Next" variant="brand" onclick={updateLead}></lightning-button>
+        </template>
+        
+        <template if:true={errorMessage}>
+            <p class="slds-m-around_medium">{errorMessage}</p>
+        </template>
+    </lightning-card>
+</template>

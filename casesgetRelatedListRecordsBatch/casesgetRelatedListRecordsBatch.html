@@ -1,0 +1,22 @@
+<template>
+    <h1>Account Related records</h1>
+    <template for:each={results} for:item="result">
+        <lightning-card
+          key={result.result.listReference.relatedListId}
+          title={result.result.listReference.relatedListId}
+        >
+          <template lwc:if={result.result.count}>
+            <div class="slds-m-around_medium">
+              <template for:each={result.result.records} for:item="rec">
+                <p key={rec.fields.Id.value}>
+                    <a onclick={navigateToCaseRecord} data-record-id={rec.fields.Id.value}>
+                        {rec.fields.CaseNumber.value}
+                    </a>
+                </p>
+                
+              </template>
+            </div>
+          </template>
+        </lightning-card>
+      </template>
+</template>

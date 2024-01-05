@@ -1,0 +1,112 @@
+.container {
+    padding: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* Add margin to separate cards vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-label {
+  font-size: 18px;
+}
+
+.medicalConditionSection{
+	padding: 4% 0%;
+}
+.medicalConditionSection p{
+	color: #777B7F;
+	font-size: 20px;
+	font-weight: 400;
+}
+.medicalConditionSection p.emergencyPnl{
+	font-size: 14px;
+}
+.medicalConditionSection h1{
+	color: #0C306A;
+	font-size: 36px;
+	font-weight: 700;
+}
+.twoPadding {
+    padding-bottom: 2%;
+}
+ul.bringSection li{
+	padding-top: 2%;
+}
+ul.bringSection li a{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border: 2px solid #F0F0F0;
+	background-color:#FFF;
+	display: block;
+	padding: 40px;
+}
+ul.bringSection li a span, ul.bringSection li a h2{
+	display: inline-block;
+	vertical-align: middle;
+}
+ul.bringSection li a span.careImg, ul.bringSection li a span.careImg2, 
+ul.bringSection li a span.careImg3, ul.bringSection li a span.arrowImg{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGFH&operationContext=DELIVERY&contentId=05THs00001o1ySQ&page=0&d=/a/Hs0000012wW7/op8GB1P1rKO1aN8IoUhUDazOw3uBl9zmdFUvohSadVM&oid=00DHs000001QFbz&dpt=null&viewId=");
+	background-repeat: no-repeat;
+	text-indent: -99999px;
+	float: left;
+	width: 90px;
+	height: 90px;
+	padding: 1px 2px;
+	filter: grayscale(100%);
+	background-size: 90px;
+}
+ul.bringSection li a h2{
+	color: #777B7F;
+	font-size: 30px;
+	font-weight: 600;
+    width: 69%;
+    margin-left: 30px;
+}
+ul.bringSection li a h2 span{
+	padding-top: 10px;
+	display: block;
+	font-size: 20px;
+	font-weight: 300;
+}
+ul.bringSection li a span.careImg2{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGFI&operationContext=DELIVERY&contentId=05THs00001o1ySa&page=0&d=/a/Hs0000012wWC/pwuRVnAtu0VdY0o5ZCvcOhc1liBpu09Q5ymEbrQ44Yw&oid=00DHs000001QFbz&dpt=null&viewId=");
+}
+ul.bringSection li a span.careImg3{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGFJ&operationContext=DELIVERY&contentId=05THs00001o1ySk&page=0&d=/a/Hs0000012wWQ/S.lkaf_qrcdJ8Dk0MAYq3MwmAsbkB4Z3hlzH3UCO65c&oid=00DHs000001QFbz&dpt=null&viewId=");
+}
+ul.bringSection li a span.arrowImg{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGFM&operationContext=DELIVERY&contentId=05THs00001o1ySp&page=0&d=/a/Hs0000012wWD/d3fKVTghxI5HpMeG9AA_TS7CDVpS6nwdEXOc1BfKVqk&oid=00DHs000001QFbz&dpt=null&viewId=");
+	background-position: bottom;
+	float: right;
+	width: 60px;
+    height: 60px;
+    background-size: 60px;
+    margin-top: 20px;
+}
+ul.bringSection li a:hover{
+	border: 2px solid #F8D790;
+	background-color:#FEFCF8;
+}
+ul.bringSection li a:hover h2{
+	color: #13499F;
+}
+ul.bringSection li a:hover h2 span{
+	color: #777B7F;
+}
+ul.bringSection li a:hover span.careImg, ul.bringSection li a:hover span.careImg2,
+ul.bringSection li a:hover span.careImg3, ul.bringSection li a:hover span.arrowImg{
+	filter: inherit;
+}

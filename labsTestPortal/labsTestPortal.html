@@ -1,0 +1,37 @@
+<template>
+    <div class="medicalConditionSection">
+        <div class="pageSize">
+            <h1>Virtual Health Consultations, Anytime, Anywhere</h1>
+            <p>Don't let location or time constraints keep you from receiving top-tier medical care. Consult with our specialized doctors or therapists right from the comfort of your home, using your phone, tablet, or computer. We're not just embracing the future of healthcare; we're creating it. </p>
+            <p class="emergencyPnl"><img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YfdVe&operationContext=DELIVERY&contentId=05THs00001mZjgl&page=0&d=/a/Hs0000012vWZ/xm984QJHEAzH54ACodH.YtdmaPmGnKlMLS.i2FREL_0&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Emergency Icon"/> If you're experiencing a medical emergency, please <b><u>Dial 911</u></b> immediately.</p>
+            
+            
+            
+            <div class="medicalForm">
+                <h2>What are you concerned about?</h2>
+                
+                <div class="rowMulti">
+                    
+                        <lightning-combobox required
+                        label="Select Lab/Test"
+                        value={selectedCondition}
+                        options={conditionOptions}
+                        onchange={handleConditionChange}
+                             ></lightning-combobox>
+                    <div class = "topPading">
+                    
+                            <button class="nextBtn prevBtn" type="button" onclick={goBack}>Previous</button>
+                            <button class="nextBtn" type="button" onclick={createMedicalCondition}>Next</button>
+                    </div> 
+                    
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+            <div class="hidenDiv">&nbsp;</div>
+        
+        </div>
+</template>

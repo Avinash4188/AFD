@@ -1,0 +1,46 @@
+<template>
+
+    <div class="medicalConditionSection">
+		<div class="pageSize">
+			<h1 class="twoPadding">What Brings you here today?</h1>
+			<ul class="bringSection">
+				<li>
+					<a data-card-type="medical-condition" onclick={handleCardClick}>
+						<span class="careImg">&nbsp;</span>
+						<h2>I have a medical problem?<span>No worries, our clinicians have you covered.</span></h2>
+						<span class="arrowImg">&nbsp;</span>
+					</a>
+				</li>
+				<!--<li>
+					<a data-card-type="holistic-approach" onclick={handleCardClick}>
+						<span class="careImg careImg2">&nbsp;</span>
+						<h2>Curious About a Holistic Approach to Wellness?<span>Explore the benefits of functional medicine with us, right from the comfort of your home.</span></h2>
+						<span class="arrowImg">&nbsp;</span>
+					</a>
+				</li>-->
+				<li>
+					<a data-card-type="lab-testing" onclick={handleCardClick}>
+						<span class="careImg careImg3">&nbsp;</span>
+						<h2>I want Labs.<span>Fantastic! We have lots of options.</span></h2>
+						<span class="arrowImg">&nbsp;</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+    <!--<lightning-card title="What Brings you here today?" icon-name="custom:custom20">
+        <div class="container">
+            <lightning-card title="Immediate Care at Your Fingertips" data-card-type="medical-condition" onclick={handleCardClick} class="card">
+                <p class="slds-p-horizontal_small">Connect with a healthcare professional instantly for treatments, prescription renewals.</p>
+            </lightning-card>
+            <lightning-card title="Curious About a Holistic Approach to Wellness?" data-card-type="holistic-approach" onclick={handleCardClick} class="card">
+                <p class="slds-p-horizontal_small">Explore the benefits of functional medicine with us, right from the comfort of your home.</p>
+            </lightning-card>
+            <lightning-card title="Interested in Convenient Lab Testing?" data-card-type="lab-testing" onclick={handleCardClick} class="card">
+                <p class="slds-p-horizontal_small">Simplify your healthcare pathway by requesting lab tests from the comfort of your home.</p>
+            </lightning-card>
+        </div>
+    </lightning-card>-->
+</template>

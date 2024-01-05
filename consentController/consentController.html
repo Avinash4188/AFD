@@ -1,0 +1,23 @@
+<template>
+    <div class="mainSlideHeader signupSection loginSection">
+		<div class="pageSize">
+			<div class="leftSection">
+				<h1>Please acknowledge.</h1>
+				<p>Your information is safe with us.</p>
+				<p class="emergencyPnl"><img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YfdVe&operationContext=DELIVERY&contentId=05THs00001mZjgl&page=0&d=/a/Hs0000012vWZ/xm984QJHEAzH54ACodH.YtdmaPmGnKlMLS.i2FREL_0&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Emergency Icon"/> If you're experiencing a medical emergency, please <b><u>Dial 911</u></b> immediately.</p>
+			</div>
+			<div class="rightSection">
+				<label class="acceptText">I am at least 18 years of age and I have read and accept:</label>
+				<template for:each={consentRecords} for:item="consent">
+					<div class="greyBK" key={consent.Id}>
+						<div class="checkBoxList">
+							<input type="checkbox" data-record-id={consent.Id} onchange={handleCheckboxChange} />
+						</div>
+						<a class="memberIcon memberIcon1" data-tcid={consent.Sort_Order__c} onclick={handlePolicyLink} target="_blank" rel="noopener noreferrer">{consent.Name}</a>
+					</div>
+				</template>
+				<button class="agreBtn" onclick={saveConsentLogs}>Let’s move on.</button>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Multi-Select Picklist">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label">Select Options</label>
+            <lightning-input label="Search" type="text" onchange={handleSearchChange}></lightning-input>
+                <div class="options-container">
+                    <label key={picklistOptions.value}>
+                        <lightning-dual-listbox
+                            name="picklistOptions"
+                            label="Options"
+                            source-label="Available"
+                            selected-label="Selected"
+                            options={getTest}
+                            value={finalSelection}
+                            onchange={handlePicklistChange}>
+                        </lightning-dual-listbox>
+                    </label>
+                </div>
+            
+        </div>
+    </lightning-card>
+</template>

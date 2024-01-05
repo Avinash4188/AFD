@@ -1,0 +1,73 @@
+<template>
+    <div class="medicalConditionSection">
+		<div class="pageSize">
+			<div class="medicalForm">
+				<h2>More about you:</h2>
+				
+				<form>
+					<div class="rowMulti">
+						<label>When did you see a doctor?</label>
+						<input class="iconDate" required type="date" placeholder="Sep 6, 2023" value={Baseline_Health_Overview__c.Most_Recent_Physical_Medical_Visit__c} onchange={handleRecentVisitDateChange} >
+					</div>
+					<div class="rowMulti fullWidth rowMultiNoMargin">
+						<label>Add details of your last visit</label>
+						<textarea required placeholder="Your Response" onchange={handleVisitDetailsChange} ></textarea>
+					</div>
+					<div class="rowMulti">
+						<label>How tall are you? (in)</label>
+						<input class="noIcon" required type="number" step="0.01"  value={Baseline_Health_Overview__c.Height__c} onchange={handleHeightChange} >
+					</div>
+					<div class="rowMulti rowMultiNoMargin">
+						<label>How much do you currently weigh? (lb)</label>
+						<input class="noIcon" required type="number" step="0.01" value={Baseline_Health_Overview__c.Weight__c} onchange={handleWeightChange}>
+					</div>
+					<div class="rowMulti rowBottom fullWidth radioButton">
+						<label>Have you ever been told you have high blood pressure?</label>
+                        <lightning-radio-group value={hasHighBloodPressure} options={highBloodPressureOptions} onchange={handleHighBloodPressureChange}></lightning-radio-group>
+					</div>
+					<template if:true={hasHighBloodPressure}>
+							<div class="rowMulti">
+								<label>Diastolic Pressure</label>
+								<input  class="noIcon" required type="number" step="0.01" value={Baseline_Health_Overview__c.Diastolic_Pressure__c} onchange={handleDiastolicPressureChange}>
+							</div>
+							<div class="rowMulti rowMultiNoMargin">
+								<label>Systolic Pressure</label>
+								<input  class="noIcon" required type="number" step="0.01" value={Baseline_Health_Overview__c.Systolic_Pressure__c} onchange={handleSystolicPressureChange}>
+							</div>
+					</template>
+                    <div class = "rowMulti fullWidth rowMultiNoMargin">
+						<label>What medications are you currently taking?</label>
+						<textarea placeholder="Your Responses" required onchange={handleMedicationsChange}></textarea>
+                    </div>
+                    <div class = "rowMulti rowBottom fullWidth radioButton">
+						<label>Any allergic reaction to medication?</label>
+					    <lightning-radio-group value={hasAllergicReaction} options={allergicReactionOptions} onchange={handleAllergicReactionChange}></lightning-radio-group>
+                    </div>
+					<template if:true={hasAllergicReaction}>
+							<div class="rowMulti fullWidth rowMultiNoMargin">
+								<label>What happened when you had an allergic reaction?</label>
+								<textarea placeholder="Your Responses" required onchange={handleAllergicReactionDetailsChange}></textarea>
+							</div>
+					</template>
+                    
+
+					<div class = "rowMulti sortLabeltext">
+						<label>What other medical conditions do you have?</label>
+                        <lightning-combobox source-label="Available" selected-label="Selected" options={picklistValuesMC} value={selectedMedicalConditions} onchange={handleMedicalConditionsChange} required></lightning-combobox>
+                    </div>
+                    <!--<div class = "rowMulti rowMultiNoMargin sortLabeltext">
+						<label>Do you have any environmental allergies?</label>
+            		    <lightning-combobox source-label="Available" selected-label="Selected" options={picklistValuesAllergies} value={selectedEnvironmentalAllergies} onchange={handleEnvironmentalAllergiesChange} required></lightning-combobox>
+                    </div>-->
+					<div class="topPading btnClear">
+						<button class="nextBtn prevBtn" type="button" onclick={goBack}>Go Back</button>
+						<button class="nextBtn" type="button" onclick={saveRecord}>Keep Going</button>
+					</div>
+					
+				</form>
+				
+				
+			</div>
+		</div>
+	</div>
+</template>

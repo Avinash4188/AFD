@@ -1,0 +1,13 @@
+<template>
+    <lightning-input label="Search" type="text" onchange={handleSearchChange}></lightning-input>
+    
+        <div class="options-container">
+            <template for:each={filteredOptions} for:item="option">
+                <label key={option.value}>
+                    <input type="checkbox" data-id={option.value} onchange={handleCheckboxChange}></input>
+                    {option.label}
+                </label>
+            </template>
+        </div>
+    
+</template>

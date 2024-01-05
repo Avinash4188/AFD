@@ -1,0 +1,205 @@
+.pageSize{
+	width: 1400px;
+	margin: 0 auto;
+}
+.medicalConditionSection{
+	padding: 4% 0%;
+}
+.medicalConditionSection p{
+	color: #777B7F;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 20px 0px;
+}
+.medicalConditionSection p.emergencyPnl{
+	font-size: 14px;
+	color: #777B7F;
+    font-weight: 400;
+}
+p.emergencyPnl img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 21px;
+}
+.medicalConditionSection h1{
+	color: #0C306A;
+	font-size: 36px;
+	font-weight: 700;
+}
+.medicalForm{
+	padding-top: 0%;
+}
+.medicalForm h2{
+	color: #0C306A;
+	font-size: 38px;
+	font-weight: 600;
+	padding-bottom:3%;
+}
+.rowMulti{
+	margin-right: 3%;
+	float: left;
+	width: 48.5%;
+}
+.rowMultiNoMargin{
+	margin-right: 0px;
+}
+.medicalForm label{
+	color: #555A5F;
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 10px;
+    display: block;
+}
+.btnClear{
+	clear: both;
+}
+button.nextBtn{
+	background-color: #13499F;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 18px 60px;
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+}
+button.prevBtn{
+	border: 1px solid #999C9F;
+	background-color: #F9F9F9;
+	margin-right: 15px;
+	color: #999C9F;
+}
+button{
+	cursor: pointer;
+}
+.medicalForm input{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-repeat: no-repeat;
+	background-position: 10px 16px;
+	border: 1px solid #E8E8E8;
+	background-color: white;
+	background-size: 23px;
+	margin-bottom: 25px;
+	width: 88.7%;
+    padding:21px 17px;
+	padding-left: 43px;
+}
+input.iconLocation{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGwt&operationContext=DELIVERY&contentId=05THs00001o21Ro&page=0&d=/a/Hs0000012wXJ/GgBaycyID6BPWb6qCV2MJJJJpjONP9whwgP4XF94dmQ&oid=00DHs000001QFbz&dpt=null&viewId=")
+}
+
+.radio-item{
+	float: left;
+    width: 31.8%;
+    padding-right:20px;
+	padding-bottom: 20px;
+}
+.radio-item [type="radio"] {
+	display: none;
+}
+.radio-item label {
+	display: block;
+	padding: 20px;
+	border: 2px solid #F0F0F0;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: 400;
+	min-width: 250px;
+	white-space: nowrap;
+	position: relative;
+	transition: 0.4s ease-in-out 0s;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    min-height: 230px;
+}
+.radio-item label p{
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.radio-item label:after {
+	background: #F9F9F9;
+	height: 19px;
+	width: 19px;
+	border: 2px solid #BBBDBF;
+	right: 14px;
+    top: calc(79px - 52px);
+}
+.radio-item label:before {
+	background: #13499F;
+	height: 11px;
+    width: 11px;
+    right: 18px;
+    top: calc(76px - 45px);
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+	border-color: #524eee;
+	border: 2px solid #B0C2DF;
+	background-color: #F1F4F9;
+	box-shadow: 0px 1px 20px 0px rgba(19, 73, 159, 0.10);
+	color: #13499F;
+}
+.radio-item [type="radio"]:checked ~ label p, .radio-item [type="radio"]:checked ~ label h3{
+	color: #13499F;	
+}
+.radio-item [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+.radio-item [type="radio"]:checked ~ label:after{
+	background:#D7E0EF;
+    border: 2px solid #6185BF;
+}
+.radio-item label p{
+	background-repeat: no-repeat;
+	background-size: 18px;
+    padding-left: 24px;
+    text-wrap: balance;
+	background-position: 0px 5px;
+}
+.radio-item label p.locatIcon{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGwt&operationContext=DELIVERY&contentId=05THs00001o21Ro&page=0&d=/a/Hs0000012wXJ/GgBaycyID6BPWb6qCV2MJJJJpjONP9whwgP4XF94dmQ&oid=00DHs000001QFbz&dpt=null&viewId=");
+}
+.radio-item label p.locatphoneIcon{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000Yfu1s&operationContext=DELIVERY&contentId=05THs00001o0ilv&page=0&d=/a/Hs0000012vvF/kUF2uPPV.6jN6VDxO4489iRgTE75WVMhV6ekAe0fw1s&oid=00DHs000001QFbz&dpt=null&viewId=");
+}
+.radio-item [type="radio"]:checked ~ label p.locatIcon{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGws&operationContext=DELIVERY&contentId=05THs00001o21RZ&page=0&d=/a/Hs0000012wX9/ysLqXHFQK9xYjJ2N8jEmxksRKkC4cjXeDtmoh7jQDOM&oid=00DHs000001QFbz&dpt=null&viewId=");
+}
+.radio-item [type="radio"]:checked ~ label p.locatphoneIcon{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGwx&operationContext=DELIVERY&contentId=05THs00001o21Re&page=0&d=/a/Hs0000012wXE/9jIW83B_O9BGuOlkmc3VK1gZ9MxcmpCGK42NELF_KKQ&oid=00DHs000001QFbz&dpt=null&viewId=");
+}
+.pharBtn{
+	padding-top: 30px;
+}
+.radio-list{
+    clear:both;
+    display:block;
+	padding-top: 4%;
+}
+.hidenDiv {
+	clear: both;
+	line-height:1;
+	display: block;
+}
+.radio-item label h3{
+	text-wrap: balance;
+	font-size: 24px;
+    font-weight: 400;
+	color: #555A5F;
+	width:94%;
+}

@@ -1,0 +1,243 @@
+<template>
+    <div class="medicalConditionSection">
+
+        <div class="pageSize">
+
+            <div class="medicalForm">
+
+                <h2>Baseline Questions</h2>
+
+                <template for:each={displayedQuestions} for:item="question">
+
+                    <div key={question.Id}>
+                        
+                        <template for:each={question.responseFields} for:item="field">
+
+                            <div key={field.fieldName}>
+
+                                <div class="rowMulti">
+
+                                    <!-- text Fields -->
+                                    
+                                    <template if:true={field.isText}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+                                        <input type="text" placeholder="Your Respose" data-questionid={question.Id} onchange={handleTextInput} >
+                                        
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti rowMultiNoMargin">
+
+                                    <!-- date Fields -->
+
+                                    <template if:true={field.isDate}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <input type="date"  value={question.Response__c} data-questionid={question.Id} onchange={handleDateInput} >
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti ">
+
+                                    <!-- checkbox Fields -->
+
+                                    <template if:true={field.isCheckbox}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <input type="checkbox"  value={question.Response__c} data-questionid={question.Id} onchange={handleCheckboxInput} >
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti rowMultiNoMargin">
+
+                                    <!-- number Fields -->
+
+                                    <template if:true={field.isNumber}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <input type="number" step="0.01"  value={question.Response__c} data-questionid={question.Id} onchange={handleNumberInput} >
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti fullWidth rowMultiNoMargin">
+
+                                    <!-- textarea Fields -->
+
+                                    <template if:true={field.isTextarea}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <textarea  data-questionid={question.Id} onchange={handleTextareaInput} ></textarea>
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti">
+
+                                    <!-- picklist Fields -->
+
+                                    <template if:true={field.isPicklist}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <lightning-combobox
+
+                                            name={field.fieldName}
+
+                                            data-questionid={question.Id}
+
+                                            options={field.picklistOptions}
+
+                                            value={field.selectedValue}
+
+                                            onchange={handlePicklistInput}
+
+                                        ></lightning-combobox>
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti rowMultiNoMargin">
+
+                                    <!-- multiselect Fields -->
+
+                                    <template if:true={field.isMultiselectPicklist}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <lightning-dual-listbox source-label="Available" selected-label="Selected"
+
+                                            name={field.fieldName}
+
+                                            data-questionid={question.Id}
+
+                                            options={multiSelectOption}
+
+                                            value={multiSelect}
+
+                                            onchange={handleMultiselectInput}
+
+                                        ></lightning-dual-listbox>
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti ">
+
+                                    <!-- radio Fields -->
+
+                                    <template if:true={field.isRadioButton}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <lightning-radio-group data-questionid={question.Id} value={radio} options={radioOption} onchange={handleRadioInput}></lightning-radio-group>
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti fullWidth rowMultiNoMargin">
+
+                                    <!-- file Fields -->
+
+                                    
+
+                                    <template if:true={field.isFile}>
+                                        <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                        <label>Attach receipt</label>
+                                        <lightning-file-upload
+
+                                                        name="fileUploader"
+
+                                                        accept={acceptedFormats}
+
+                                                        data-questionid={question.Id}
+
+                                                        record-id={leadId}
+
+                                                        file-field-name="Guest_Record_fileupload__c"
+
+                                                        file-field-value={leadId}
+
+                                                        onuploadfinished={handleFileUpload}
+
+                                                        multiple></lightning-file-upload>
+
+                                    </template>
+
+                                </div>
+
+                                <div class="rowMulti fullWidth rowMultiNoMargin">
+
+                                    <template if:true={radio}>
+
+            
+
+                                        <!-- additional Fields -->
+
+                                            <template if:true={field.isAdditionalTypeText}>
+                                                <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                                <label>Add additional details here...</label>
+
+                                                <textarea data-questionid={question.Id} onchange={handleAdditionalText} ></textarea>
+
+                                            </template>
+
+                                            <template if:true={field.isAdditionalTypeDate}>
+                                                <label>{question.Sort_Order__c}.{question.Question__c}</label>
+
+                                                <input type="date"  value={question.Additional_Information__c} data-questionid={question.Id} onchange={handleAdditionalDate} >
+
+                                            </template>
+
+                                    </template>
+
+                                </div>                       
+
+                            </div>                    
+
+                        </template>
+
+                    </div>
+
+                </template>
+                
+
+            </div>
+            <div class="rowMulti fullWidth rowMultiNoMargin">
+                <div class="slds-m-top_medium">
+    
+                    <lightning-button-group>
+    
+                        <lightning-button label="Previous Page" onclick={previousPage} disabled={isFirstPage}></lightning-button>
+    
+                        <lightning-button label="Next Page" onclick={nextPage} disabled={isLastPage}></lightning-button>
+    
+                    </lightning-button-group>
+    
+                </div>
+                <template if:true={showSaveButton}>
+    
+                    
+                    <div class="topPading btnClear">
+						<button class="nextBtn prevBtn" type="button" onclick={goBack}>Go Back to Pharmacies</button>
+						<button class="nextBtn" type="button" onclick={saveResponses}>Submit</button>
+					</div>
+    
+                </template>
+            </div>
+            
+
+        </div>
+        
+
+    </div>
+</template>

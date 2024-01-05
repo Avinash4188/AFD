@@ -1,0 +1,68 @@
+<template>
+    <div class="medicalConditionSection">
+		<div class="pageSize">
+			<div class="medicalForm">
+				<h2>About you:</h2>
+				
+				<form>
+					<div class="rowMulti">
+						<label>First Name</label>
+						<input class="iconUser" required type="text" placeholder="First Name" value={lead.FirstName} onchange={handleFirstNameChange}>
+					</div>
+					<div class="rowMulti rowMultiNoMargin">
+						<label>Last Name</label>
+						<input class="iconUser" required type="text" placeholder="Last Name" value={lead.LastName} onchange={handleLastNameChange}>
+					</div>
+					<div class="rowMulti">
+						<label>Preferred Name</label>
+						<input class="iconUser" required type="text" placeholder="Preferred Name" value={lead.Company} onchange={handlePreferredNameChange}>
+					</div>
+                    <div class="rowMulti rowMultiNoMargin">
+						<label>Date Of Birth</label>
+						<input class="iconDate" required type="date" placeholder="Jan 1, 2000" value={lead.HealthCloudGA__BirthDate__c} onchange={handleDOBChange}>
+					</div>
+					<div class="rowMulti">
+						<label>Phone</label>
+						<input class="iconPhone" required type="phone" placeholder="xxx - xxx - xxxx"  onchange={handlePhoneChange}>
+					</div>
+					<div class="rowMulti radioButton rowMultiNoMargin">
+						<label>Gender assigned at birth</label>
+						<lightning-combobox options={genderOptions} required value={lead.HealthCloudGA__Gender__c} onchange={handleGenderChange}></lightning-combobox>
+					</div>
+					<div class="rowMulti">
+						<label>Street</label>
+						<input class="iconUser" required type="text" placeholder="Street" onchange={handleStreetChange}>
+					</div>
+					<div class="rowMulti rowMultiNoMargin">
+						<label>City</label>
+						<input class="iconUser" required type="text" placeholder="City" onchange={handleCityChange}>
+					</div>
+					<div class="rowMulti">
+						<label>State</label>
+						<input class="iconUser" required type="text" placeholder="State" onchange={handleStateChange}>
+					</div>
+					<div class="rowMulti rowMultiNoMargin">
+						<label>PostalCode</label>
+						<input class="iconUser" required type="number" placeholder="PostalCode" onchange={handlePostalCodeChange}>
+					</div>
+					<div class="rowMulti">
+						<label>Country</label>
+						<input class="iconUser" required type="text" placeholder="Country" onchange={handleCountryChange}>
+					</div>
+					
+					<div class="btnClear">
+						<button class="nextBtn prevBtn" type="button" onclick={goBack}>Go Back</button>
+						<button class="nextBtn" type="button" onclick={updateLead}>Keep Going</button>
+					</div>
+					
+				</form>
+				
+				
+			</div>
+		</div>
+	</div>
+
+
+
+    
+</template>

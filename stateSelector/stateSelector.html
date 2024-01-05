@@ -1,0 +1,31 @@
+<template>
+    <div class="medicalConditionSection">
+		<div class="pageSize">
+			<div class="medicalForm">
+				<h2>What State are you in now?</h2>
+				
+                <div class="rowMulti">
+					
+                    <lightning-combobox required
+                            label="State Selector"
+                            value={selectedCondition}
+                            options={conditionOptions}
+                            onchange={handleConditionChange}
+                        ></lightning-combobox>
+                    <div class = "topPading">
+                    
+                            <button class="nextBtn prevBtn" type="button" onclick={goBack}>Go Back</button>
+                            <button class="nextBtn" type="button" onclick={stateSelect}>Keep Going</button>
+                    </div> 
+					
+				</div>
+				
+				
+				
+			</div>
+		</div>
+        
+            <div class="hidenDiv">&nbsp;</div>
+        
+	    </div>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Create a Profile">
+        <div class="slds-p-around_medium">
+            <lightning-input label="First Name" value={lead.FirstName} onchange={handleFirstNameChange}></lightning-input>
+            <lightning-input label="Last Name" value={lead.LastName} onchange={handleLastNameChange}></lightning-input>
+            <lightning-input label="Preferred Name" value={lead.Company} onchange={handlePreferredNameChange}></lightning-input>
+            <lightning-input label="Date Of Birth" type="date" value={lead.HealthCloudGA__BirthDate__c} onchange={handleDOBChange}></lightning-input>
+            
+            <lightning-combobox label="Gender" options={genderOptions} value={lead.HealthCloudGA__Gender__c} onchange={handleGenderChange}></lightning-combobox>
+            <lightning-input label="Phone" value={lead.Phone} onchange={handlePhoneChange}></lightning-input>
+
+            <div class="slds-m-top_medium">
+                <lightning-button label="Next" variant="brand" onclick={updateLead}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Terms of Service, Privacy Policy, and HIPAA Notice" icon-name="custom:custom14">
+        <p>In order to join AFD Health, you must agree to the terms below. To acknowledge, click the checkbox.</p>
+        <div class="slds-p-around_medium">
+            <p>I am at least 18 years of age and I have read and accept:</p>
+            <lightning-input type="checkbox" label="Membership Terms of Service" name="Membership_Terms_of_Service__c" checked={membershipChecked} onchange={handleMembershipChange}></lightning-input>
+            <lightning-input type="checkbox" label="Medical Terms of Service" name="Medical_Terms_of_Service__c" checked={medicalChecked} onchange={handleMedicalChange}></lightning-input>
+            <lightning-input type="checkbox" label="Privacy Policy" name="Privacy_Policy__c" checked={privacyChecked} onchange={handlePrivacyChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <p>I acknowledge receipt of the following:</p>
+            <lightning-input type="checkbox" label="Notice of HIPAA Privacy Practices" name="Notice_of_HIPAA_Privacy_Practies__c" checked={hipaaChecked} onchange={handleHIPAAChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <lightning-button label="Next" onclick={updateLead} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

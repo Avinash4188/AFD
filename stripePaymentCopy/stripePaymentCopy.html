@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Payment">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <template if:true={showStartButton}>
+                        <lightning-button label="Start Payment" onclick={startPayment} variant="brand"></lightning-button>
+                    </template>
+                    <template if:true={showRetryButton}>
+                        <lightning-button label="Retry" onclick={retry}></lightning-button>
+                    </template>
+                </div>
+                <!--<div class="slds-col">
+                    <lightning-button label="Submit" onclick={handleNext} disabled={isNextButtonDisabled}></lightning-button>
+                </div>-->
+            </div>
+            <div class="slds-p-top_medium">
+                <lightning-progress-bar value={progressValue} variant="circular" size="large"></lightning-progress-bar>
+            </div>
+            <div class="slds-p-top_medium">
+                <lightning-output-field field-name="Stripe_Payment_Status__c"></lightning-output-field>
+            </div>
+        </div>
+    </lightning-card>
+</template>

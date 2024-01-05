@@ -1,0 +1,41 @@
+<template>
+    <div lwc:if={showProgress}>
+    <lightning-progress-bar  value={progressValue} variant="circular" size="large"></lightning-progress-bar>
+    </div>
+    <template lwc:if={getStarted}>
+           
+        <c-get-started  onnextstep={handleNextStep}></c-get-started>
+    </template>
+    
+        <template lwc:elseif={getStartStep}>
+           
+            <c-start1  onnextstep={handleNextStep}></c-start1>
+        </template>
+        <template lwc:elseif={renderSpinner}>
+            <div class="spinner">
+                <lightning-spinner  alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+            </div>
+        </template>
+        
+        <template lwc:elseif={getStep2}>
+           
+            <c-medical-condition lead-id={leadId} onnextstep={handleNextStep}></c-medical-condition>
+        </template>
+        <template lwc:elseif={getStep3}>
+           
+            <c-basic-intake lead-id={leadId} onnextstep={handleNextStep} ></c-basic-intake>
+        </template>
+        <template lwc:elseif={getStep4}>
+           
+            <c-baseline-health lead-id={leadId} onnextstep={handleNextStep} ></c-baseline-health>
+        </template>
+        <template lwc:elseif={getStep5}>
+           
+            <c-places-api-component lead-id={leadId} onnextstep={handleNextStep} ></c-places-api-component>
+        </template>
+        <template lwc:elseif={getStep6}>
+           
+            <c-baseline-question-list lead-id={leadId} onnextstep={handleNextStep} ></c-baseline-question-list>
+        </template>
+
+</template>

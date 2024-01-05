@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Pharmacy Finder">
+        <div class="input-section">
+            <label for="zipCode">Enter Zip Code:</label>
+            <lightning-input name="zipCode" onchange={handleZipCodeChange}></lightning-input>
+        </div>
+        <div class="input-section">
+            <label for="radiusOption">Select Radius:</label>
+            <lightning-combobox name="radiusOption" options={radiusOptions} value={selectedRadiusOption} onchange={handleRadiusChange}></lightning-combobox>
+        </div>
+        <div class="input-section">
+            <label for="sortOption">Sort By:</label>
+            <lightning-combobox name="sortOption" options={sortOptions} value={selectedSortOption} onchange={handleSortChange}></lightning-combobox>
+        </div>
+        <div class="input-section">
+            <lightning-button label="Search Pharmacies" onclick={handleSearch}></lightning-button>
+        </div>
+        <div class="pharmacy-list">
+            <template for:each={pharmacies} for:item="pharmacy">
+                <lightning-card key={pharmacy.place_id} title={pharmacy.name}>
+                    <p>Address: {pharmacy.formatted_address}</p>
+                    <p>Phone: {pharmacy.formatted_phone_number}</p>
+                    <p>Fax: {pharmacy.formatted_fax_number}</p>
+                    <div class="selection-combobox">
+                        <lightning-combobox options={selectionOptions} value={pharmacy.selectedOption} onchange={handlePharmacySelection} data-id={pharmacy.place_id}></lightning-combobox>
+                    </div>
+                </lightning-card>
+            </template>
+        </div>
+        <div class="footer">
+            <lightning-button label="Save Selected Pharmacies" onclick={handleSaveSelected}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

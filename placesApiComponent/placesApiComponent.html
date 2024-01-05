@@ -1,0 +1,47 @@
+<template>
+    <div class="medicalConditionSection">
+		<div class="pageSize">
+            
+			<div class="medicalForm">
+				<h2>Your Pharmacy</h2>
+				<div class="rowMulti">
+					
+					<form>
+						<label>Zip Code</label>
+						<input class="iconLocation" type="text" placeholder="14500" value={zipCode} onchange={handleZipCodeChange}>
+						
+						<div class="btnClear">
+							<button class="nextBtn" type="button" onclick={searchLocations}>Find it</button>
+						</div>
+					</form>
+				</div>
+                <div class="radio-list">
+                    <template if:true={showLocations}>
+                        <template for:each={locations} for:item="location">
+                            
+                                    <div class="radio-item" key={location.id}>
+                                        <input name="radio" id={location.item_Id} type="radio" value={location.name} onclick={handleSelectLocation} data-id={location.Id}>
+                                        <label for={location.item_Id}>
+                                            <h3>{location.name}</h3>
+                                            <p class="locatIcon">{location.formatted_address}</p>
+                                            <p class="locatphoneIcon">{location.formatted_phone_number}</p>
+                                        </label>
+                                    </div>
+                                </template> 
+                            
+                        </template>
+                </div>	
+                <template if:true={showNextButton}>
+                    <div class="btnClear pharBtn">
+                        <button class="nextBtn prevBtn" type="button" onclick={goBack}>Go Back</button>
+                        <button class="nextBtn" type="button" onclick={storePharmacy}>Keep Going</button>
+                    </div>
+                </template>
+			</div>
+			
+		</div>
+        <div class="hidenDiv">&nbsp;</div>
+	</div>
+
+
+</template>

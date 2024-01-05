@@ -1,0 +1,12 @@
+<template>
+<div>
+<lightning-card title="Google Places">
+    <div class="slds-m-around_medium">
+        <lightning-input label="Latitude" value={latitude} disabled></lightning-input>
+        <lightning-input label="Longitude" value={longitude} disabled></lightning-input>
+        <lightning-input label="Pharmacy Name" value={pharmacyName} disabled></lightning-input>
+        <lightning-button label="Fetch Data" onclick={fetchData}></lightning-button>
+    </div>
+</lightning-card>
+</div>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Create Lead">
+        <div class="slds-p-around_medium">
+            <lightning-input label="First Name" required type="text" value={firstName} onchange={handleFirstNameChange}></lightning-input>
+            <lightning-input label="Last Name" required type="text" value={lastName} onchange={handleLastNameChange}></lightning-input>
+            <lightning-input label="Email" required type="email" value={email} onchange={handleEmailChange}></lightning-input>
+            <lightning-input label="Enter OTP" required disabled={disabled} value={otp} onchange={handleOTPChange}></lightning-input>
+            
+            
+            <br>
+            <div class="button-container">
+                <lightning-button label="Send OTP" variant="brand" onclick={sendOTP}></lightning-button>
+                <lightning-button label="Verify" variant="brand" onclick={verifyOTP}></lightning-button>
+                <template if:true={showNewButton}>
+                    <lightning-button label="Next" variant="brand" onclick={Next}></lightning-button>
+                </template>
+                
+            </div>
+            <p>{message}</p>
+        </div>
+    </lightning-card>
+</template>

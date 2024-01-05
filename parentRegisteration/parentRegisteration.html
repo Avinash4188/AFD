@@ -1,0 +1,48 @@
+<template>
+    <div lwc:if={showProgress}>
+        <p class="center-align">Registration Progress</p>
+        <lightning-progress-bar value={progressValue} variant="circular" size="large"></lightning-progress-bar>
+    </div>
+    <template lwc:if={getStartStep}>
+        <c-start1 onnextstep={handleNextStep}></c-start1>
+    </template>
+    <template lwc:elseif={renderSpinner}>
+        <div class="spinner">
+            <lightning-spinner  alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+        </div>
+    </template>
+    <template lwc:elseif={getTermsOfService}>
+        <c-consent-controller lead-id={leadId} onnextstep={handleNextStep}></c-consent-controller>
+    </template>
+    <template lwc:elseif={getCardComponent}>
+        <c-card-component oncardclick={handleCardClick}></c-card-component>
+    </template>
+    <template lwc:elseif={getMedicalCondition}>
+        <c-medical-condition lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-medical-condition>
+    </template>
+    <template lwc:elseif={getLabsTest}>
+        <c-labs-test lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-labs-test>
+    </template>
+    <template lwc:elseif={getStateSelector}>
+        <c-state-selector lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-state-selector>
+    </template>
+    <template lwc:elseif={getBasicIntake}>
+        <c-basic-intake lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-basic-intake>
+    </template>
+    <template lwc:elseif={getBaselineHealth}>
+        <c-baseline-health lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-baseline-health>
+    </template>
+    <template lwc:elseif={getPharmacy}>
+        <c-places-api-component lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-places-api-component>
+    </template>
+    <template lwc:elseif={getBaselineQuestionList}>
+        <c-baseline-question-list lead-id={leadId} onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-baseline-question-list>
+    </template>
+    <template lwc:elseif={getPaymentStripe}>
+        <c-stripe-payment lead-id={leadId} onnextstep={handleNextStep}></c-stripe-payment>
+    </template> 
+    <template lwc:elseif={getThankyou}>
+        <c-registration-success lead-id={leadId} onnextstep={handleNextStep}></c-registration-success>
+    </template>
+
+</template>

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card >
+        <div class="mainSlideHeader signupSection">
+            <div class="pageSize">
+                <div class="leftSection">
+                    <h1>Welcome to a new experience of Healthcare!</h1>
+                    <p>This is the first step.</p>
+                    <p class="emergencyPnl"><img src="https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YfdVe&operationContext=DELIVERY&contentId=05THs00001mZjgl&page=0&d=/a/Hs0000012vWZ/xm984QJHEAzH54ACodH.YtdmaPmGnKlMLS.i2FREL_0&oid=00DHs000001QFbz&dpt=null&viewId=" alt="Emergency Icon"/> If you're experiencing a medical emergency, please <b><u>Dial 911</u></b> immediately.</p>
+                </div>
+                <div class="rightSection">
+                    <form>
+                        <input class="iconUser" type="text" placeholder="First Name" required value={firstName} onchange={handleFirstNameChange}>
+                        <input class="iconUser" type="text" placeholder="Last Name" required value={lastName} onchange={handleLastNameChange}>
+                        <div class="mailOPTSend">
+                            <input class="iconMail" type="email" placeholder="Enter Your Email" required value={email} onchange={handleEmailChange}>
+                            <button class="slds-button slds-button_brand" type="button" onclick={sendOTP}>Send Code</button>
+                            <p>We will send you a one-time Password to this Email</p>
+                        </div>
+                        <div class="otpSection">
+                            <input class="iconOTP" type="text" placeholder="Enter Verification Code" disabled={disabled} value={otp} onchange={handleOTPChange}>
+                            <button class="slds-button slds-button_brand" type="button" onclick={verifyOTP}>Verify</button>
+                        </div>
+                        <div class="privacyText">By continuing, I confirm that I am over 18 years old & agree to AFD Health's <a href="#">Terms & Privacy Policy</a></div>
+                        <template if:true={showNewButton}>
+                            <button class="slds-button slds-button_brand contBtn" type="button" onclick={Next}>Click to Continue</button>
+                        </template>
+                        <div class="privacyText loginText">Have an account? <a href="#">Login.</a></div>					
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    
+    </lightning-card>
+</template>

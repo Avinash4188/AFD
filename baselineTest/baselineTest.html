@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Baseline Questions">
+    <div>
+        <template for:each={questions} for:item="question">
+            <div key={question.Id}>
+                <p>{question.Sort_Order__c}.{question.Question__c}</p>
+                <template for:each={question.responseFields} for:item="field">
+                    <div key={field.fieldName}>
+                        <label for={field.fieldName}>{field.label}</label>
+                        <input type={field.inputType} id={field.fieldName} name={field.fieldName} />
+                    </div>
+                </template>
+            </div>
+        </template>
+        <button onclick={saveResponses}>Save Responses</button>
+    </div>
+</lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <div lwc:if={showProgress}>
+        <p class="center-align">New Case Progress...</p>
+        <lightning-progress-bar value={progressValue} variant="circular" size="large"></lightning-progress-bar>
+    </div>
+    <template lwc:if={getCardComponent}>
+        <c-card-component-copy oncardclick={handleCardClick}></c-card-component-copy>
+    </template>
+    <template lwc:elseif={renderSpinner}>
+        <div class="spinner">
+            <lightning-spinner  alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+        </div>
+    </template>
+    <template lwc:elseif={getMedicalCondition}>
+        <c-medical-condition-copy onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-medical-condition-copy>
+    </template>
+    <template lwc:elseif={getLabsTest}>
+        <c-labs-test-portal onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-labs-test-portal>
+    </template>
+   
+    <template lwc:elseif={getBaselineQuestionList}>
+        <c-baseline-question-list-copy onnextstep={handleNextStep} onpreviousstep ={handlePreviousStep}></c-baseline-question-list-copy>
+    </template>
+    <template lwc:elseif={getPaymentStripe}>
+        <c-stripe-payment-copy onnextstep={handleNextStep}></c-stripe-payment-copy>
+    </template> 
+    <template lwc:elseif={getThankyou}>
+        <c-registration-success-portal onnextstep={handleNextStep}></c-registration-success-portal>
+    </template>
+    
+</template>

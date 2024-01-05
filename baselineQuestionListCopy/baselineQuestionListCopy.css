@@ -1,0 +1,159 @@
+.pageSize{
+	width: 1400px;
+	margin: 0 auto;
+}
+.medicalConditionSection{
+	padding: 4% 0%;
+}
+.medicalConditionSection p{
+	color: #777B7F;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 20px 0px;
+}
+.medicalConditionSection p.emergencyPnl{
+	font-size: 14px;
+    vertical-align: top;
+	margin-bottom: 0px;
+	display: block;
+}
+.medicalConditionSection p.emergencyPnl img{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	width: 21px;
+}
+.medicalConditionSection h1{
+	color: #0C306A;
+	font-size: 36px;
+	font-weight: 700;
+}
+.medicalForm{
+	padding-top: 0%;
+}
+.medicalForm h2{
+	color: #0C306A;
+	font-size: 38px;
+	font-weight: 600;
+	padding-bottom:3%;
+}
+.rowMulti{
+	margin-right: 3%;
+	float: left;
+	width: 48.5%;
+}
+.rowMultiNoMargin{
+	margin-right: 0px;
+}
+.medicalForm label{
+	color: #555A5F;
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 10px;
+    display: block;
+}
+.medicalForm input, .medicalForm textarea{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-repeat: no-repeat;
+	background-position: 10px 16px;
+	border: 1px solid #E8E8E8;
+	background-color: white;
+	background-size: 23px;
+	margin-bottom: 25px;
+	width: 100%;
+    padding:21px 17px;
+}
+.fullWidth{
+	width: 100%;
+}
+.medicalForm textarea{
+	width: 95.8%;
+    height: 100px;
+	padding: 2%;
+}
+.rowBottom{
+	margin-bottom:30px;
+}
+input.iconDate{
+	background-image: url("images/icon-date.png");
+}
+.radioButton label, .radioButton input{
+	display: inline-block;
+    width: auto;
+    padding-bottom: 0px;
+    vertical-align: middle;
+}
+.radioButton label.labelBlock{
+	display: block;
+	padding-bottom: 20px;
+}
+.radioButton input[type="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #BBBDBF;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: transparent;
+	position: relative;
+	padding: 10px;
+    margin: 0px 18px 0px 0px;
+    display: inline-block;
+}
+.radioButton input[type="radio"]:checked {
+	background-color: #F1F4F9;
+	border: 1px solid #13499F;
+}
+.radioButton input[type="radio"]:checked::before {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-color: #13499F;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: appear 0.8s;
+}
+button{
+	cursor: pointer;
+}
+.btnClear{
+	clear: both;
+}
+button.nextBtn{
+	background-color: #13499F;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 18px 60px;
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+}
+button.prevBtn{
+	border: 1px solid #999C9F;
+	background-color: #F9F9F9;
+	margin-right: 15px;
+	color: #999C9F;
+}
+ul.bringSection li a span.careImg, ul.bringSection li a span.careImg2, 
+ul.bringSection li a span.careImg3, ul.bringSection li a span.arrowImg{
+	background-image: url("https://afdhealth.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Hs00000YgGFH&operationContext=DELIVERY&contentId=05THs00001o1ySQ&page=0&d=/a/Hs0000012wW7/op8GB1P1rKO1aN8IoUhUDazOw3uBl9zmdFUvohSadVM&oid=00DHs000001QFbz&dpt=null&viewId=");
+	background-repeat: no-repeat;
+	text-indent: -99999px;
+	float: left;
+	width: 90px;
+	height: 90px;
+	padding: 1px 2px;
+	filter: grayscale(100%);
+	background-size: 90px;
+}
+.panel {
+	display: block !important;
+}
